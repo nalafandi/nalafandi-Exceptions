@@ -1,4 +1,6 @@
-public class ExceptionChallenge {
+import org.eclipse.jetty.http.HttpTester.Message;
+
+public class ExceptionChallenge extends Exception{
     /**
      * An exception is an unexpected event that occurs during our program.
      * Most likely, you have already encountered an Exception (ArrayIndexOutOfBounds, etc).
@@ -20,6 +22,7 @@ public class ExceptionChallenge {
      *
      * Check out this guide on throwing exceptions: https://rollbar.com/guides/java/how-to-throw-exceptions-in-java/#
      */
-    public void mustThrow(){
+    public void mustThrow() throws Exception {
+        throw new ExceptionChallenge();
     }
 }
